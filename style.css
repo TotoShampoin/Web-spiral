@@ -1,4 +1,36 @@
 body {
-    background-color: #FDD;
+    font-family: 'Century Gothic';
+    background-color: #FBB;
     color: #400;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48pt;
+}
+
+.catalog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.catalog .elmt {
+    text-align: center;
+    font-size: 24pt;
+    background-color: #FDD;
+    border: solid 2px #400;
+    padding: 16px;
+    border-radius: 16px;
+    width: 256px;
+}
+.catalog a {
+    text-decoration: none;
+    color: #400;
+    transform: scale(1);
+    transition: ease 0.25s;
+}
+.catalog a:hover {
+    transform: scale(1.25);
+    transition: ease 0.25s;
 }
