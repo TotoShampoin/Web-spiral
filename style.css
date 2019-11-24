@@ -1,12 +1,21 @@
+@font-face {
+    font-family: "centugothic";
+    src: url("century-gothic.ttf");
+}
+
 body {
-    font-family: 'Century Gothic';
-    background-color: #FBB;
-    color: #400;
+    font-family: "centugothic";
+    font-size: 16pt;
+    background-color: #400;
+    color: #FDD;
 }
 
 h1 {
     text-align: center;
     font-size: 48pt;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 8px;
 }
 
 .catalog {
@@ -18,19 +27,42 @@ h1 {
 .catalog .elmt {
     text-align: center;
     font-size: 24pt;
-    background-color: #FDD;
-    border: solid 2px #400;
+    background-color: #200;
+    border: solid 2px #800;
     padding: 16px;
     border-radius: 16px;
     width: 256px;
+    margin: 0 32px;
 }
 .catalog a {
     text-decoration: none;
-    color: #400;
+    color: #FDD;
     transform: scale(1);
     transition: ease 0.25s;
 }
 .catalog a:hover {
     transform: scale(1.25);
     transition: ease 0.25s;
+}
+
+footer .catalog {
+    justify-content: flex-start;
+    margin: 0px;
+    margin-bottom: 8px;
+    margin-left: 32px;
+}
+
+footer .catalog .elmt {
+    font-size: 18pt;
+    padding: 12px;
+    width: 192px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+canvas {
+    border: black 1px solid;
 }
