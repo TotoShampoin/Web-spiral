@@ -15,7 +15,7 @@ function update() {
     if(vort.length>max)
         vort = vort.splice(1);
     /* vort[vort.length] = vort[vort.length-1]+(Math.random()*60-30)/180*Math.PI; */
-    vort[vort.length] = (Math.sin(fra*Math.PI/180)*60)/180*Math.PI;
+    vort[vort.length] = (Math.sin(fra*Math.PI/180)*120)/180*Math.PI;
     fra++;  
     disp();
 }
