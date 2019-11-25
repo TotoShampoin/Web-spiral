@@ -1,10 +1,10 @@
 window.onload = function() {
     c = document.getElementById('gc');
     ctx = c.getContext('2d');
-    setInterval(update,1000/60);
+    setInterval(update,1000/30);
 }
 
-const max = 360;
+const max = 180;
 const ray = 320;
 
 var vort = [0];
@@ -35,10 +35,10 @@ function disp() {
             line3d(2, 
                 Math.cos(ang)*ray,
                 Math.sin(ang)*ray,
-                10+(i)*10, 
+                10+(i)*20, 
                 Math.cos(anj)*ray,
                 Math.sin(anj)*ray,
-                10+(i+1)*10
+                10+(i+1)*20
             );
         }
     }
