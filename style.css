@@ -65,4 +65,5 @@ main {
 }
 canvas {
     border: black 1px solid;
+    width: 67%;
 }
