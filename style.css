@@ -34,6 +34,9 @@ h1 {
     width: 256px;
     margin: 0 32px;
 }
+.catalog.index .elmt {
+    margin: 32px 32px;
+}
 .catalog a {
     text-decoration: none;
     color: #FDD;
