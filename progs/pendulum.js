@@ -1,6 +1,8 @@
 window.onload = function() {
     gc = document.getElementById('gc');
     ctx = gc.getContext('2d');
+    time = new Date();
+    tic0 = time.getTime();
     setInterval(update,1000/60);
 }
 
@@ -39,7 +41,8 @@ function update() {
         ctx.lineWidth = 5*midZ/(p1[2]+midZ);
         line3d(gc,ctx, p0[0],p0[1],p0[2], p1[0],p1[1],p1[2]);
     }
-    vecAng += 1;
+    time = new Date();
+    vecAng = (time.getTime())/1000* 360/5;
 }
 
 function radians(angle) {
