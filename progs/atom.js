@@ -1,7 +1,7 @@
 window.onload = function() {
     c = document.getElementById('gc');
     ctx = c.getContext('2d');
-    setInterval(update,1000/30);
+    setInterval(update,1000/60);
 }
 
 var vecAng = 0;
@@ -36,6 +36,7 @@ function update() {
         ctx.stroke();
         ctx.restore();
     }
-    vecAng -= 0.5;
-    a += 1;
+    time = new Date();
+    a = (time.getTime())/1000* 360/12;
+    vecAng = (-(time.getTime())/1000* 360/24)%360;
 }

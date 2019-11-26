@@ -1,8 +1,6 @@
 window.onload = function() {
     gc = document.getElementById('gc');
     ctx = gc.getContext('2d');
-    time = new Date();
-    tic0 = time.getTime();
     setInterval(update,1000/60);
 }
 
@@ -31,7 +29,10 @@ function update() {
             var p0 = pos3dsphere(o[0],o[1],o[2], 64, radians(180+vecAng+ang+xx*180),0);
             var p1 = pos3dsphere(o[0],o[1],o[2], 64, radians(180+vecAng+ang+1+xx*180),0);
             ctx.lineWidth = 5*midZ/(p1[2]+midZ);
-            line3d(gc,ctx, p0[0],p0[1],p0[2], p1[0],p1[1],p1[2]);
+            line3d(gc,ctx, 
+                p0[0] , p0[1] , p0[2], 
+                p1[0] , p1[1] , p1[2]
+            );
         }
     }
     for(var ang=0;ang<330;ang++) {
