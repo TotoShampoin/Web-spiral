@@ -3,7 +3,7 @@ window.onload = function() {
     ctx = gc.getContext('2d');
 
     max = gc.height/2;
-    vr = 4;
+    vr = 12;
 
     setInterval(update,1000/1000);
 }
@@ -14,7 +14,7 @@ function update() {
     a = []
     for(var ind=0;ind<max;ind++) {
         time = new Date();
-        a[ind] = Math.abs(((time.getTime()-ind*4)/1000*512*2)%512-256);
+        a[ind] = Math.abs(((time.getTime()-ind*vr)/1000*512*1)%512-256);
     }
 
     for(var ind=0;ind<max;ind++) {
