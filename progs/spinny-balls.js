@@ -4,12 +4,17 @@ window.onload = function() {
     setInterval(update,1000/1000);
     w = gc.width; h = gc.height; 
     rR = Math.min(w,h);
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0,0,w,h);
 }
 
 var fra = 0;
 
 function update() {
-    ctx.fillStyle = "#000";
+    time = new Date();
+    fra = (((time.getTime())/1000*360)/4 )*Math.PI/180 ;
+
+    ctx.fillStyle = "#0001";
     ctx.fillRect(0,0,w,h);
     ctx.fillStyle = "#FFF";
     for(var r=0; r<3; r++) {
@@ -25,8 +30,6 @@ function update() {
             }
         }
     }
-    time = new Date();
-    fra = (((time.getTime())/1000*360)/4 )*Math.PI/180 ;
 }
 
 function putcircle(x,y,r) {
