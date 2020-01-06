@@ -2,7 +2,7 @@ window.onload = function() {
     gc = document.getElementById('gc');
     ctx = gc.getContext('2d');
     w = gc.width; h = gc.height; r = (w+h)/2;
-    setInterval(update,5);
+    setInterval(update,1000/30);
 }
 
 var RES = 24;
